@@ -9,13 +9,14 @@ body {
 .navbar {
   height: auto;
   margin-top: 40px;
-  margin-left: 10vw;
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 
 .logo {
   align-items: center;
+  justify-content: center;
   display: flex;
   width: 50%;
 }
@@ -29,15 +30,51 @@ body {
 
 .head {
   display: flex;
-  width: 50%;
   height: auto;
   gap: 16px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main_menu {
+  display: flex;
   flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+} 
+
+.sub_menu {
+  display: flex;
+  flex-direction: row;
+  font-family: Open Sans;
+  gap: 25px;
+  justify-content: center;
+  background-color: #ebebeb;
+  height: 30px;
+  align-items: center;
+}
+
+.pod_menu {
+  color: black;
+}
+
+.pod_menu:hover {
+  color: black;
+  border-bottom: 1px solid;
+  transition: all 2s ease-out;
+  background-color: #e1e1e1;
+}
+
+.pod_menu_active {
+  color: #ff5572;
+  border-bottom: 1px solid;
+  text-decoration: underline;
 }
 
 .rectangle {
-  width: auto;
-  height: 54px;
+  min-width: 90px;
+  height: 40px;
   padding: 8px;
   border-radius: 5px;
   border: 2px solid;
@@ -52,8 +89,8 @@ body {
 }
 
 .rectangle-active {
-  width: auto;
-  height: 54px;
+  min-width: 90px;
+  height: 40px;
   padding: 8px;
   border-radius: 5px;
   border: 2px solid;
@@ -69,7 +106,7 @@ body {
 }
 
 .banner {
-  margin-top: 40px;
+  margin-top: 20px;
   height: 65vh;
   width: 100%;
   margin-left: 0px;
@@ -322,7 +359,6 @@ body {
 
 .long-line {
   width: 100%;
-  margin-top: 5vh;
   left: -35px;
   border: 1px solid;
   border-color: rgb(108, 110, 123);
@@ -338,6 +374,25 @@ body {
 .grey {
   color: grey;
   margin-left: 5px;
+}
+
+.red {
+  margin-left: 10px;
+  color: #ff5572;
+}
+
+.sort-title {
+  font-family: Open Sans;
+  font-size: 36px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.category-link {
+  text-decoration: none;
+  color: #ff5572;
 }
 
 .path {
@@ -410,6 +465,13 @@ body {
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.topic-text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #841844;
+  font-family: Open Sans;
 }
 
 .card-button-detail {
@@ -766,7 +828,7 @@ body {
   }
   .content-text {
     font-size: 15px;
-    line-height: 9vw;
+    line-height: 7vw;
   }
   .content-box {
     flex-direction: column-reverse;

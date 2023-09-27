@@ -2,14 +2,21 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная", 
-		"index.php", 
+		"/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Новости", 
-		"news.php", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О компании", 
+		"/about/", 
 		Array(), 
 		Array(), 
 		"" 
