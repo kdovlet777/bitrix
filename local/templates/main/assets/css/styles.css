@@ -50,7 +50,6 @@ body {
   font-family: Open Sans;
   gap: 25px;
   justify-content: center;
-  background-color: #ebebeb;
   height: 30px;
   align-items: center;
 }
@@ -62,8 +61,6 @@ body {
 .pod_menu:hover {
   color: black;
   border-bottom: 1px solid;
-  transition: all 2s ease-out;
-  background-color: #e1e1e1;
 }
 
 .pod_menu_active {
@@ -556,12 +553,13 @@ body {
 
 .input {
   width: 35%;
-  height: 30px;
+  height: 40px;
   font-size: 18px;
   padding: 5px;
   border: 1px solid;
   border-color: #841844;
   border-radius: 5px;
+  background-color: white;
 }
 
 .nname {
@@ -579,6 +577,15 @@ body {
 .qquest {
   display: flex;
   flex-direction: column;
+}
+
+.ccategory {
+  display: flex;
+  flex-direction: column;
+}
+
+.mf-ok-text {
+  color: green;
 }
 
 .inputtext {
@@ -620,7 +627,7 @@ body {
 }
 
 .message {
-  width: 46%;
+  padding-left: 0px;
   height: auto;
   color: #841844;
   font-family: Open Sans;

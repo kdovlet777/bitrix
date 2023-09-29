@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Спорт", 
+		"/news/sports/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Экономика", 
+		"/news/economics/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Путешествия", 
+		"/news/travel/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Происшествия", 
+		"/news/incidents/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Политика", 
+		"/news/politics/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

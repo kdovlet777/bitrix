@@ -18,8 +18,8 @@ $arUrlRewrite=array (
   ),
   12 => 
   array (
-    'CONDITION' => '#^/news/topic/(\\d+)/page-(\\d+)$#',
-    'RULE' => 'CATEGORY_ID=$1&PAGEN_1=$2',
+    'CONDITION' => '#^/news/topic/(\\S+)/page-(\\d+)$#',
+    'RULE' => 'CATEGORY_NAME=$1&PAGEN_1=$2',
     'ID' => '',
     'PATH' => '/news/index.php',
     'SORT' => 100,
@@ -30,6 +30,14 @@ $arUrlRewrite=array (
     'RULE' => 'componentName=$1',
     'ID' => NULL,
     'PATH' => '/bitrix/services/mobileapp/jn.php',
+    'SORT' => 100,
+  ),
+  15 => 
+  array (
+    'CONDITION' => '#^/news/(topic/)*([a-z]+)/$#',
+    'RULE' => 'CATEGORY_NAME=$2',
+    'ID' => '',
+    'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
   6 => 
@@ -48,12 +56,20 @@ $arUrlRewrite=array (
     'PATH' => '/desktop_app/router.php',
     'SORT' => 100,
   ),
-  11 => 
+  14 => 
   array (
-    'CONDITION' => '#^/news/topic/(\\d+)/$#',
-    'RULE' => 'CATEGORY_ID=$1',
+    'CONDITION' => '#^/news/topic/(\\S+)/$#',
+    'RULE' => 'CATEGORY_NAME=$1',
     'ID' => '',
     'PATH' => '/news/index.php',
+    'SORT' => 100,
+  ),
+  17 => 
+  array (
+    'CONDITION' => '#^/contacts/\\?(\\w+)/$#',
+    'RULE' => 'success=$1',
+    'ID' => '',
+    'PATH' => '/about/contacts.php',
     'SORT' => 100,
   ),
   0 => 
@@ -72,12 +88,36 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
+  19 => 
+  array (
+    'CONDITION' => '#^/about/contacts/$#',
+    'RULE' => '',
+    'ID' => '',
+    'PATH' => '/about/contacts.php',
+    'SORT' => 100,
+  ),
+  18 => 
+  array (
+    'CONDITION' => '#^/categorylist/$#',
+    'RULE' => '',
+    'ID' => '',
+    'PATH' => '/categorylist/index.php',
+    'SORT' => 100,
+  ),
   8 => 
   array (
     'CONDITION' => '#^/news/(\\d+)/$#',
     'RULE' => 'ELEMENT_ID=$1',
     'ID' => '',
     'PATH' => '/news/detail.php',
+    'SORT' => 100,
+  ),
+  16 => 
+  array (
+    'CONDITION' => '#^/contacts/$#',
+    'RULE' => '',
+    'ID' => '',
+    'PATH' => '/about/contacts.php',
     'SORT' => 100,
   ),
   13 => 

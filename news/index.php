@@ -2,37 +2,19 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Список новостей");
 ?><br>
-<?	
 
-$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"pod_menu", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "pod_menu",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(
-			0 => "",
-			1 => "",
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "pod_menu",
-		"USE_EXT" => "Y",
-		"COMPONENT_TEMPLATE" => "pod_menu",
-		"MENU_THEME" => "site"
-	),
-	false
-);
-	if ($_GET['CATEGORY_ID']){
-		$categoryID = $_GET['CATEGORY_ID'];
+<? if ($_GET['CATEGORY_NAME']){
+		$category_name = $_GET['CATEGORY_NAME'];
+		$catFilter = array('CODE' => $category_name);
+		if(CModule::IncludeModule("iblock")){
+			$category = CIBlockElement::GetList(array(), $catFilter)->GetNext();
+		}
 		$GLOBALS['arrFilter'] = array(
-			"PROPERTY_category" => $categoryID,
+			"PROPERTY_category" => $category['ID'],
 		);
-	} else {
-$APPLICATION->IncludeComponent(
+	} else { ?>
+
+<? $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"banner",
 	Array(
@@ -157,4 +139,6 @@ $APPLICATION->IncludeComponent(
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

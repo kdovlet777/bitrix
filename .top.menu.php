@@ -20,6 +20,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Компонент category.list", 
+		"/categorylist/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
