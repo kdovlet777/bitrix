@@ -1,0 +1,8 @@
+@import "~style";
+
+$block-name: "b-label";
+
+.#{$block-name} {
+	font-size: 24px;
+	width: auto;
+}

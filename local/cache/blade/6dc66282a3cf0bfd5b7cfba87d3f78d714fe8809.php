@@ -1,0 +1,1 @@
+<div id="map" class="<?php echo e($block); ?>"></div><?php /**PATH /var/www/workspace/btx/www/local/templates/main/frontend/src/block/forms/map/map.blade.php ENDPATH**/ ?>

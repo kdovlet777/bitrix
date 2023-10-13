@@ -1,0 +1,2 @@
+<input type="submit" name="submit" class="<?php echo e($block); ?>" value="<?php echo e(GetMessage("MFT_SUBMIT")); ?>" >
+<input type="hidden" name="PARAMS_HASH" value="<?php echo e($item["PARAMS_HASH"]); ?>"><?php /**PATH /var/www/workspace/btx/www/local/templates/main/frontend/src/block/feedback/sendbutton/sendbutton.blade.php ENDPATH**/ ?>

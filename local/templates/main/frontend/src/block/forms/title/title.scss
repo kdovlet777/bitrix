@@ -1,0 +1,12 @@
+@import "~style";
+
+$block-name: "b-title";
+
+.#{$block-name} {
+	font-family: "Open Sans";
+	font-size: 36px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}

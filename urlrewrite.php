@@ -1,5 +1,13 @@
 <?php
 $arUrlRewrite=array (
+  17 => 
+  array (
+    'CONDITION' => '#^/about/contacts/\\?success=([a-zA-Z0-9]+)#',
+    'RULE' => 'success=$1',
+    'ID' => '',
+    'PATH' => '/about/contacts.php',
+    'SORT' => 100,
+  ),
   2 => 
   array (
     'CONDITION' => '#^/online/([\\.\\-0-9a-zA-Z]+)(/?)([^/]*)#',
@@ -14,6 +22,14 @@ $arUrlRewrite=array (
     'RULE' => 'alias=$1&videoconf',
     'ID' => NULL,
     'PATH' => '/desktop_app/router.php',
+    'SORT' => 100,
+  ),
+  24 => 
+  array (
+    'CONDITION' => '#^/books/filter/(.+?)/apply/\\??(.*)#',
+    'RULE' => 'SMART_FILTER_PATH=$1&$2',
+    'ID' => 'dv:catalog.smart.filter',
+    'PATH' => '/books/index.php',
     'SORT' => 100,
   ),
   12 => 
@@ -48,6 +64,14 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/ymarket/index.php',
     'SORT' => 100,
   ),
+  25 => 
+  array (
+    'CONDITION' => '#^/books/([^/]+?)/\\??(.*)#',
+    'RULE' => 'ELEMENT_ID=$1&$2',
+    'ID' => 'bitrix:catalog.element',
+    'PATH' => '/books/detail.php',
+    'SORT' => 100,
+  ),
   3 => 
   array (
     'CONDITION' => '#^/online/(/?)([^/]*)#',
@@ -62,14 +86,6 @@ $arUrlRewrite=array (
     'RULE' => 'CATEGORY_NAME=$1',
     'ID' => '',
     'PATH' => '/news/index.php',
-    'SORT' => 100,
-  ),
-  17 => 
-  array (
-    'CONDITION' => '#^/contacts/\\?(\\w+)/$#',
-    'RULE' => 'success=$1',
-    'ID' => '',
-    'PATH' => '/about/contacts.php',
     'SORT' => 100,
   ),
   0 => 
@@ -110,14 +126,6 @@ $arUrlRewrite=array (
     'RULE' => 'ELEMENT_ID=$1',
     'ID' => '',
     'PATH' => '/news/detail.php',
-    'SORT' => 100,
-  ),
-  16 => 
-  array (
-    'CONDITION' => '#^/contacts/$#',
-    'RULE' => '',
-    'ID' => '',
-    'PATH' => '/about/contacts.php',
     'SORT' => 100,
   ),
   13 => 

@@ -1,0 +1,20 @@
+@import "~style";
+
+$block-name: "b-input";
+
+.#{$block-name} {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	width: 100%;
+
+	&__input {
+		height: 40px;
+		font-size: 18px;
+		padding: 5px;
+		border: 1px solid;
+		border-color: #841844;
+		border-radius: 5px;
+		background-color: white;
+	}
+}

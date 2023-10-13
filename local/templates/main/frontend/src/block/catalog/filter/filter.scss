@@ -1,0 +1,113 @@
+@import "~style";
+
+$block-name: "b-filter";
+
+.#{$block-name} {
+	position: relative;
+	padding-top: 26px;
+	background-color: #e4d5dc;
+
+	&__filter_title {
+		font-size: 18px;
+		margin-bottom: 10px;
+		color: #841844;
+	}
+
+	&__btn_themes {
+		background-color: #e4d5dc;
+		border-color: #841844;
+		color: #841844;
+
+		&:hover {
+			background-color: #841844;
+			border-color: #fff;
+			color: #fff;
+		}
+	}
+
+	&__btn_link {
+		background-color: #e4d5dc;
+		border-color: #841844;
+		color: #841844;
+
+		&:hover {
+			background-color: #841844;
+			border-color: #fff;
+			color: #fff;
+		}
+
+		&:focus {
+			background-color: #841844;
+			border-color: #fff;
+			color: #fff;
+		}
+	}
+
+	&__box_title {
+		span {
+			color: #841844;
+			border-bottom: 1px solid transparent;
+			cursor: pointer;
+		}
+	}
+
+	&__container_block {
+		font-size: 11px;
+		color: #841844;
+		background-color: #e4d5dc;
+	}
+
+	&__input_container {
+		input {
+			display: block;
+			width: 100%;
+			font-size: 18px;
+			height: 38px;
+			margin: 0;
+			padding: 0 4px;
+			border: 1px solid #841844;
+			border-radius: 2px;
+			background: #e4d5dc;
+			outline: 0;
+		}
+	}
+
+	&__pricebar_v {
+		background: #841844;
+		z-index: 80;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+
+	&__pricebar_vn {
+		background: #e4d5dc;
+	}
+
+	&__popup_result {
+		display: inline-block;
+		position: relative;
+		left: auto;
+		right: auto;
+		bottom: -7px;
+		border: 1px solid #841844;
+		margin-left: 5px;
+		border-radius: 5%;
+		padding: 2px;
+		&#{$block-name}#modef_num {
+			color: #841844;
+		}
+
+		a {
+			text-decoration: none;
+			color: #841844;
+			line-height: 10px;
+		}
+	}
+
+	&__param_text {
+		display: block;
+		text-align: left;
+		color: #841844;
+	}
+}

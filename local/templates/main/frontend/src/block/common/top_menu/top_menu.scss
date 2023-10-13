@@ -1,0 +1,40 @@
+@import "~style";
+
+$block-name: "b-top_menu";
+
+.#{$block-name} {
+	&__main-menu {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	&__rectangle {
+		min-width: 90px;
+		height: 40px;
+		padding: 8px;
+		border-radius: 5px;
+		border: 2px solid;
+		border-color: #841844;
+		gap: 10px;
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		font-family: "Open Sans";
+		text-wrap: nowrap;
+
+		&--active {
+			color: white;
+			background-color: #841844;
+		}
+	}
+
+	&__btn {
+		text-decoration: none;
+		color: #841844;
+		width: auto;
+	}
+}

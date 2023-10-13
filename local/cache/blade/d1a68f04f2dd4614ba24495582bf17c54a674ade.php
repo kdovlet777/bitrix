@@ -1,0 +1,2 @@
+<input id="<?php echo e($id); ?>" type="submit" name="submit" class="<?php echo e($block); ?>" value="<?php echo e($value); ?>" >
+<?php /**PATH /var/www/workspace/btx/www/local/templates/main/frontend/src/block/forms/sendbutton/sendbutton.blade.php ENDPATH**/ ?>

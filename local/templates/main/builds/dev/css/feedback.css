@@ -1,0 +1,101 @@
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/feedback/email/email.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+.b-email {
+  display: flex;
+  flex-direction: column;
+}
+.b-email__label {
+  font-size: 36px;
+  width: auto;
+}
+.b-email__input {
+  width: 35%;
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid;
+  border-color: #841844;
+  border-radius: 5px;
+  background-color: white;
+}
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/feedback/input/input.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+.b-input {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.b-input__input {
+  width: 35%;
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid;
+  border-color: #841844;
+  border-radius: 5px;
+  background-color: white;
+}
+.b-input__label {
+  font-size: 36px;
+  width: auto;
+}
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/feedback/selector/selector.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
+.b-selector {
+  display: flex;
+  flex-direction: column;
+}
+.b-selector__label {
+  font-size: 36px;
+  width: auto;
+}
+.b-selector__input {
+  width: 35%;
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid;
+  border-color: #841844;
+  border-radius: 5px;
+  background-color: white;
+}
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/feedback/sendbutton/sendbutton.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
+.b-sendbutton {
+  width: 36%;
+  margin-top: 20px;
+  font-size: 26px;
+  height: auto;
+  color: #841844;
+  border: 1px solid;
+  border-color: #841844;
+  border-radius: 5px;
+  padding: 5px;
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/feedback/text/text.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+.b-text {
+  display: flex;
+  flex-direction: column;
+}
+.b-text__inputtext {
+  width: 35%;
+  height: 120px;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid;
+  border-color: #841844;
+  border-radius: 5px;
+}
+.b-text__label {
+  font-size: 36px;
+  width: auto;
+}
+
+/*# sourceMappingURL=feedback.css.map*/

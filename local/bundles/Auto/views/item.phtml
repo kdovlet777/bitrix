@@ -1,0 +1,15 @@
+<?
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+?>
+<div class="content">
+	<div class="card-title"><?=$item?></div>
+	<ul>
+		<?
+		foreach ($item->getHumanPropertiesData() as $key => $value) {?>
+			<li><?=$value?></li>
+		<?}?>
+	</ul>
+</div>
+<?
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
+?>

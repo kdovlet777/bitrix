@@ -1,0 +1,15 @@
+<?
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+?>
+<div class="content">
+<?
+	foreach ($sections as $key => $value) {?>
+		<div class="card">
+			<a class="card-title" href="<?=$sections[$key]["SECTION_PAGE_URL"]?>"><?=$sections[$key]["NAME"]?></a>
+		</div>
+	<?}
+?>
+</div>
+<?
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
+?>

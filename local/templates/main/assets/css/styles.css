@@ -799,29 +799,6 @@ body {
   .news-title {
     font-size: 48px;
   }
-  .paginator {
-    justify-content: center;
-  }
-  .circle {
-    padding: 0px;
-    width: 42px;
-    height: 40px;
-  }
-  .circle-active {
-    padding: 0px;
-    width: 42px;
-    height: 40px;
-  }
-  .circle-arrow {
-    width: 50px;
-    height: 40px;
-    padding: 0px;
-  }
-  .circle-arrow:hover {
-    width: 50px;
-    height: 40px;
-    padding: 0px;
-  }
   .path {
     font-size: 10px;
   }

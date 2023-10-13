@@ -22,8 +22,22 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Компонент category.list", 
-		"/categorylist/", 
+		"Автомобиль", 
+		"/auto/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вход", 
+		"/auth/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Книги", 
+		"/books/", 
 		Array(), 
 		Array(), 
 		"" 

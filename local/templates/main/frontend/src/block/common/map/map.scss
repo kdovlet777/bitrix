@@ -1,0 +1,39 @@
+@import "~style";
+
+$block-name: "b-map";
+
+.#{$block-name} {
+	font-family: "Open Sans";
+	margin-left: 10vw;
+	margin-right: 10vw;
+
+	&__content {
+		display: block;
+		height: 60vh;
+
+		&--hidden {
+			display: none;
+		}
+	}
+
+	&__selectorbtn {
+		font-size: 18px;
+		text-decoration: underline;
+		border: none;
+		cursor: pointer;
+		background-color: white;
+
+		&--active {
+			font-weight: 600;
+			text-decoration: none;
+			cursor: default;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 15px;
+		flex-flow: row;
+		margin-bottom: 20px;
+	}
+}

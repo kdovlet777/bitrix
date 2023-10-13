@@ -1,0 +1,22 @@
+@import "~style";
+
+$block-name: "b-text";
+
+.#{$block-name} {
+	display: flex;
+	flex-direction: column;
+
+	&__inputtext {
+		height: 120px;
+		font-size: 18px;
+		padding: 5px;
+		border: 1px solid;
+		border-color: #841844;
+		border-radius: 5px;
+	}
+
+	&__label {
+		font-size: 36px;
+		width: auto;
+	}
+}

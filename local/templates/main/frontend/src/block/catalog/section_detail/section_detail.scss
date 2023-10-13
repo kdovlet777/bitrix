@@ -1,0 +1,108 @@
+@import "~style";
+
+$block-name: "b-section_detail";
+
+.#{$block-name} {
+	&__section {
+		font-family: "Open Sans";
+		display: flex;
+		flex-flow: row;
+		margin-left: 10vw;
+		margin-right: 10vw;
+	}
+
+	&__container-picture {
+		margin: 15px;
+		display: flex;
+		flex-flow: column wrap;
+		width: 50%;
+	}
+
+	&__container-price {
+		width: 50%;
+		margin: 15px;
+		padding-top: 40px;
+	}
+
+	&__title {
+		font-size: 36px;
+	}
+
+	&__imag {
+		max-width: 60%;
+		height: auto;
+	}
+
+	&__property-text {
+		font-size: 18px;
+		display: flex;
+		justify-content: space-between;
+		max-width: 60%;
+		margin: 5px;
+	}
+
+	&__text-left {
+		left: 0;
+		background-color: #841844;
+		border-radius: 4px;
+		color: white;
+		width: fit-content;
+		padding: 3px;
+	}
+
+	&__text-right {
+		right: 0;
+	}
+
+	&__price-box {
+		display: flex;
+		border-radius: 4px;
+		border-color: #841844;
+		padding: 15px;
+		gap: 10px;
+		flex-direction: column;
+	}
+
+	&__buy-btn {
+		display: block;
+		width: 100%;
+		background-color: #841844;
+		color: white;
+		text-align: center;
+		border: 1px solid;
+		border-radius: 5px;
+		height: 35px;
+		cursor: pointer;
+	}
+
+	&__lists-btn {
+		text-decoration: none;
+		width: 60%;
+		background-color: #841844;
+		color: white;
+		text-align: center;
+		border: 1px solid;
+		border-radius: 5px;
+		height: 35px;
+	}
+
+	&__price {
+		font-family: sans-serif;
+		font-style: bold;
+		font-size: 18px;
+
+		&--old {
+			text-decoration: line-through;
+			color: red;
+		}
+
+		&--new {
+			border: 1px solid #00d916;
+			font-size: 22px;
+			border-radius: 5px;
+			background-color: #00d916;
+			width: fit-content;
+			color: white;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@import "~style";
+
+$block-name: "b-footer";
+
+.#{$block-name} {
+	position: absolute;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	bottom: 0;
+
+	&__line {
+		width: auto;
+		margin-top: 106px;
+		border: 1px solid;
+		border-color: grey;
+	}
+
+	&__copyright {
+		height: 32px;
+		margin-top: 20px;
+		left: 200px;
+		font-family: "Open Sans";
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 32px;
+		text-align: left;
+		padding-bottom: 2cm;
+	}
+}

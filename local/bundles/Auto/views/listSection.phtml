@@ -1,0 +1,14 @@
+<?
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+?>
+<div class="content">
+<?
+	$arr = $list->getItems();
+	foreach ($arr as $key => $value) { ?>
+	<div class="card-text"><a href="<?=$arr[$key]['DETAIL_PAGE_URL']?>"><?=$arr[$key]["NAME"];?></a></div>
+<?	};
+?>
+</div>
+<?
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
+?>

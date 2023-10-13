@@ -1,0 +1,15 @@
+@import "~style";
+
+$block-name: "b-sendbutton";
+
+.#{$block-name} {
+	width: 100%;
+	margin-top: 20px;
+	font-size: 26px;
+	height: auto;
+	color: #841844;
+	border: 1px solid;
+	border-color: #841844;
+	border-radius: 5px;
+	padding: 5px;
+}

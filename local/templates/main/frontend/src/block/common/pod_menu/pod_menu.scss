@@ -1,0 +1,30 @@
+@import "~style";
+
+$block-name: "b-pod_menu";
+
+.#{$block-name} {
+	&__sub-menu {
+		display: flex;
+		flex-direction: row;
+		font-family: "Open Sans";
+		gap: 25px;
+		justify-content: center;
+		height: 30px;
+		align-items: center;
+	}
+
+	&__pod_menu {
+		color: black;
+
+		&--active {
+			color: #ff5572;
+			border-bottom: 1px solid;
+			text-decoration: underline;
+		}
+
+		&:hover {
+			color: black;
+			border-bottom: 1px solid;
+		}
+	}
+}

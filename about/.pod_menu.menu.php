@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"О нас", 
-		"/news/sports/", 
+		"/about/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -16,7 +16,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Отзывы", 
-		"/news/travel/", 
+		"/about/otzyvy.php", 
 		Array(), 
 		Array(), 
 		"" 

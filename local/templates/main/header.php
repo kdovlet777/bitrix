@@ -11,32 +11,25 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH ?>/assets/img/Vector.png">
 	<title><?$APPLICATION->ShowTitle()?></title>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=605716b2-2e61-4c89-9df2-18faf2753cca&lang=ru_RU" type="text/javascript">
+    </script>
+	<? \TAO::frontendCss('index'); \TAO::frontendJs('index');?>
+	<? \TAO::frontendCss('forms'); \TAO::frontendJs('forms');?>
 	<script src="https://kit.fontawesome.com/34525fb119.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-	<?$APPLICATION->ShowMeta("keywords")?>
+	<?$APPLICATION->ShowMeta("description")?>
 	<?$APPLICATION->ShowCSS();?>
 	<?$APPLICATION->ShowPanel();?>
 	<?$APPLICATION->ShowHeadStrings();?>
 	<?$APPLICATION->ShowHeadScripts();?>
-<script src="/builds/assets_css_tyles_scss.index.js"></script>
-<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH ?>/assets/css/styles.css">
 
-<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-<script type="module" src="assets/js/script.js"></script>
-<script type="text/javascript" src="assets/js/promise.js"></script>
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH ?>/assets/css/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
-	<nav class="navbar">
-		<div class="logo">
-			<img src="<?=SITE_TEMPLATE_PATH ?>/assets/img/Vector.png">
-			<p class="navbar-text">ГАЛАКТИЧЕСКИЙ<br>ВЕСТНИК</p>
-		</div>
-		<div class="head">
-		<?$APPLICATION->IncludeComponent(
+		<? ob_start(); $APPLICATION->IncludeComponent(
 	"bitrix:menu", 
 	"top_menu", 
 	array(
@@ -54,8 +47,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		"ALLOW_MULTI_SELECT" => "N"
 	),
 	false
-);?>
-<?$APPLICATION->IncludeComponent(
+);
+$top_menu = ob_get_contents();
+ob_end_clean();?>
+<? ob_start(); $APPLICATION->IncludeComponent(
 	"bitrix:menu", 
 	"pod_menu", 
 	array(
@@ -73,9 +68,42 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		"COMPONENT_TEMPLATE" => "pod_menu"
 	),
 	false
-);?>
-</div>
-	</nav>
-
-		
-	
+);
+$pod_menu = ob_get_contents();
+ob_end_clean();
+?><?ob_start();$APPLICATION->IncludeComponent(
+	"bitrix:search.title", 
+	"search", 
+	array(
+		"CATEGORY_0" => array(
+			0 => "iblock_rest_entity",
+		),
+		"CATEGORY_0_TITLE" => "",
+		"CATEGORY_0_iblock_rest_entity" => array(
+			0 => "all",
+		),
+		"CHECK_DATES" => "N",
+		"COMPONENT_TEMPLATE" => "search",
+		"CONTAINER_ID" => "title-search",
+		"INPUT_ID" => "title-search-input",
+		"NUM_CATEGORIES" => "1",
+		"ORDER" => "date",
+		"PAGE" => "#SITE_DIR#search/",
+		"SHOW_INPUT" => "Y",
+		"SHOW_OTHERS" => "N",
+		"TOP_COUNT" => "5",
+		"USE_LANGUAGE_GUESS" => "Y"
+	),
+	false
+);$search=ob_get_contents();ob_end_clean();?>
+	<?
+	$isAuthorized = $USER->IsAuthorized();
+	?>
+<?= \TAO::frontend()->renderBlock(
+    'common/header',
+    ['top_menu' => $top_menu,
+     'pod_menu' => $pod_menu,
+     'search' => $search,
+     'isAuthorized' => $IsAuthorized
+	]
+)?>
